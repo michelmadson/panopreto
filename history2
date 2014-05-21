@@ -1,0 +1,441 @@
+mii-tool 
+ifconfig
+dhclient eth0
+ifconfig eth0
+dhclient eth1
+ifconfig eth1
+cd /etc/network/
+vi interfaces 
+cat /proc/sys/net/ipv4/ip_forward 
+echo 1 > /proc/sys/net/ipv4/ip_forward 
+vi /etc/sysctl.conf 
+ifconfig
+/etc/init.d/networking stop
+ifconfig
+ifconfig eth0 down
+ifconfig eth1 down
+ifconfig
+ps aux | grep dhcp
+/etc/init.d/networking restart
+ifconfig
+cat /proc/sys/net/ipv4/ip_forward 
+cd ..
+vi fw.sh
+chmod a+x fw.sh 
+./fw.sh 
+iptables -n -lL
+iptables -t nat -n -L
+cat /etc/rc.local 
+vi /etc/rc.local 
+ifconfig
+apt-get install ssh
+ifconfig
+route -n
+ping 172.16.0.1
+ping www.terra.com.br
+route -n
+apt-get update
+apt-get install ssh
+dpkg -l | grep bind
+dpkg -l | grep bind9
+apt-get install bind9
+echo $INIT
+cd /etc/bind/
+ls
+vi named.conf.options 
+/etc/init.d/bind9 start
+nslookup
+ps uax | grep bind
+netstat -anp | more
+cat /etc/resolv.conf 
+vi /etc/bind/named.conf.options 
+/etc/init.d/bind9 stop
+/etc/init.d/bind9 stop
+/etc/init.d/bind9 start
+nslookup
+tail -f /var/log/syslog
+ifconfig
+ps aux | grep dhcp
+cd /etc/network/
+vi interfaces 
+/etc/init.d/networking stop
+ifconfig
+ping www.terra.com.br
+route -n
+ifconfigeth0 down
+ifconfig eth0 down
+ifconfig eth1 down
+ifconfig
+ifconfig
+route -n
+ping www.terra.com.br
+ifconfig eth0
+ping www.terra.com.br
+nslookup
+cd /etc/rc2.d/
+ls -la
+ls *bind*
+cd ..
+cd rc5.d/
+ls *bind*
+ls *ssh*
+cd ..
+cd rc3.d/
+ls *ssh*
+cd ..
+cd rc2.d/
+ls *ssh*
+netstat -anp | more
+hostname
+halt
+ifconfig
+ifconfig
+iptables -t nat -n -L
+ifconfig
+tcpdump -n -i eth0
+ifconfig
+tcpdump -n -i eth0
+nmap -P0 192.168.250.0/24
+ping -b 192.168.250.255
+nmap -P0 192.168.250.2
+ping -t 1 192.168.250.2
+ping -c 1 192.168.250.2
+arp -an
+nmap -P0 192.168.250.2
+nmap -P0 192.168.250.0/24
+dpkg -l | grep ntp
+apt-get install ntpdate ntp
+dpkg -l | grep ntp
+ntpdate pool.ntp.org
+/etc/init.d/ntp stop
+ntpdate pool.ntp.org
+ifconfig
+ifconfig eth1 down
+vi /etc/network/interfaces 
+vi /etc/resolv.conf 
+vi /etc/resolv.conf 
+clear
+ping 192.168.250.254
+ifconfig
+ping 192.168.250.254
+ifconfig eth0
+ifconfig eth1
+ifconfig eth1 down
+mii-tool 
+ifconfig eth0
+ifconfig eth0
+ping 192.168.250.254
+clear
+ping www.terra.com.br
+route -n
+ping 192.168.250.254
+ping www.terra.com.br
+vi /etc/resolv.conf 
+ping www.terra.com.br
+ntp pool.ntp.org
+ntpdate pool.ntp.org
+date
+ntpdate pool.ntp.org
+tzconfig 
+dpkg-reconfigure tzdata
+date
+halt
+ifconfig
+mii-tool 
+clear
+ifconfig | more
+vi /etc/network/interfaces 
+ifconfig eth0
+ifconfig eth1
+clear
+cat /proc/sys/net/ipv4/ip_forward 
+iptables -t nat -n -L
+iptables -n -L
+clear
+ifconfig eth1
+iptables -t nat -A POSTROUTING -o eth1 -s 192.168.250.0/24 -j MASQUERADE
+ps aux | grep bind
+cat /etc/resolv.conf 
+nslookup
+ifconfig
+/etc/fw.sh 
+halt
+adduser host2
+passwd root
+vi /etc/hosts
+vi /etc/hostname
+ls -la
+cd /etc/
+grep rk *
+grep rk * | grep -v dire
+grep rk * 2 > /dev/null
+grep rk * 2> /dev/null
+vi sudoers
+reboot
+userdel -r rk
+cat /etc/*-release
+cat /etc/*-release
+apt-get update
+ip a
+apt-get update
+apt-get update
+wget http://repo.zbbix.com/zabbix/2.2/debian/pool/main/z/zabbix-release/zabbix-release_2.2-1+wheezy_all.deb
+wget http://repo.zabbix.com/zabbix/2.2/debian/pool/main/z/zabbix-release/zabbix-release_2.2-1+wheezy_all.deb
+dpkg -i zabbix-release_2.2-1+wheezy_all.deb
+apt-get update
+apt-get install zabbix-server-mysql zabbix-frontend-php
+apt-get install vim
+vim /etc/apache2/conf.d/zabbix 
+service apache2 restart
+zabbix_server 
+find /php.ini
+find / -name php.ini
+vim /etc/php5/apache2/php.ini 
+service apache2 restart
+ping 192.168.100.30
+ping 192.168.100.30
+ping 192.168.100.30
+ping 192.168.100.30
+ls /usr/local/
+apt-get update
+ip a
+ip a
+/etc/init.d/networking restart
+ip a
+ip a
+apt-get update
+apt-get  install zabbix-agent
+find -name zabbix_agentd.conf
+find -name zabbix_agentd
+find /-name zabbix_agend.conf
+find /-name zabbix_agentd.conf
+find -name zabbix_*
+find -name zabbix
+find / -name zabbix_
+find / -name zabbix_agentd
+find / -name zabbix_agentd.conf
+vim /etc/zabbix/zabbix_agentd.conf 
+service zabbix-agentd start
+service zabbix-agent start
+ping 192.168.100.40
+ping 192.168.100.50
+vim /etc/zabbix/zabbix_agentd.conf 
+vim /etc/zabbix/zabbix_agentd.conf 
+ip a
+ip a
+snmpwalk -v 2c -c public 192.168.100.67
+ip a
+ip a
+apt-get install snmp snmpd
+snmpwalk -v 2c -c public 192.168.100.67
+ip a
+snmpwalk -v 2c -c public 192.168.100.67
+ping 192.168.100.67
+ip a
+ping 192.168.100.67
+ping 192.168.100.67
+ip a
+apt-get install snmp-mibs-dowloader
+vim /etc/apt/sources.list
+apt-get update
+apt-get install snmp-mibs-dowloader
+apt-get install snmp-mibs-donwloader
+apt-get install snmp-mibs-downloader
+ping 192.168.100.67
+snmpwalk -v 2c -c public 192.168.100.67
+vim /etc/zabbix/zabbix_agentd.conf 
+ping 192.168.100.67
+ping 192.168.100.67
+ping 192.168.100.67
+ping 192.168.100.67
+ping 192.168.100.67
+ping 192.168.100.67
+ping 192.168.100.50
+ping 192.168.100.50
+vim /etc/zabbix/zabbix_agentd.conf 
+ip a
+ip a
+ip a
+apt-get update
+wget -c https://forge.indepnet.net/attachments/download/1466/glpi-0.83.8.tar.gz
+tar zxvf glpi-0.83.8.tar.gz 
+apt-get install apache2 php5 mysql-server php5-mysql php5-ldap php5-dev
+mv glpi /var/www/
+chgrp www-data -R /var/www/glpi/
+ip a
+cat /etc/*-release
+mount
+mount
+mount ?
+man mount
+apt-get update
+ipa
+ip a
+ip a
+ip a
+apt-get update[
+apt-get update
+apt-get search gparted
+apt-cache search gparted
+apt-get install gparted
+fdisk -l
+history 
+uname -a
+uname -r
+ls -l
+dpkg -l | greep bash
+dpkg -l | grep b
+bash -v
+dpkg -l | grep binutils-2.17
+dpkg -l | grep binutils
+binutils --version
+binutils -version
+dpkg -l | grep bash
+dpkg -l | grep bison
+dpkg -l | grep binutils
+dpkg -l | grep bison
+bison --version
+ip a
+apt-cache search bison
+apt-get bison
+apt-get install bison
+bison --version
+dpkg -l | grep bison
+history
+dpkg -l | grep bzip
+bzip --version
+bzip2 --version
+dpkg -l | grep coreutils
+corutils --version
+coreutils --version
+
+dpkg -l | grep coreutils
+apt-get install coreutils
+dpkg -l | grep coreutils
+dpkg -l | grep diffutils
+diffutils --version
+diff --version
+apt-get install diffutils
+dpkg -l | grep diffutils
+diff --version
+core --version
+dpkg -l | grep findutils
+find --version
+dpkg -l | grep gawk
+dpkg -l | grep awk
+apt-get install gawk
+gawk --version
+dpkg -l | grep gcc
+gcc --version
+ls /usr/lib/
+ls /usr/lib/ | grep libgmp.la
+ls /usr/lib/ | more
+history
+dpkg -l | grep glibc
+glibc --version
+dpkg -l | grep libc
+apt-get install glibc
+apt-get update
+apt-get install glibc
+dpkg -l | grep libc6
+libc6 --version
+libc --version
+apt-get install libc6
+libc --version
+libc6 --version
+dpkg -l | grep libc6
+glibc --version
+dpkg -l | grep glibc
+dpkg -l | grep libc6
+dpkg -l | grep grep
+grep --version
+dpkg -l | grep gzip
+gzip --version
+uname -r
+dpkg -l | grep m4
+m4 --version
+dpkg -l | grep make
+make --version
+dpkg -l | grep patch
+patch --version
+dpkg -l | grep perl
+perl --version
+dpkg -l | grep sed
+sed --version
+dpkg -l | grep tar
+tar --version
+dpkg -l | grep xz
+xz --version
+history
+git init
+apt-get install git
+mkdir so
+cd so/
+touch README.md
+git init
+git add README.md 
+git commit -m "first commit"
+git status
+git remote add origin https://github.com/michelmadson/panopreto.git
+git push -u origin master
+cp ../.bash_history .
+git status
+git add .bash_history 
+git commit -m "feito os pre-requisitos"
+git push
+./configure --prefix=/usr
+df -h
+df -h
+fdisk -l
+df -h
+df -hT
+mkfs -v -t ext4 /dev/sdc1
+mkfs -v -t ext4 /dev/sdc
+export LFS=/mnt/lfs
+mkdir -pv $LFS
+mount -v -t ext4 /dev/sdc $LFS
+mount
+df -hT
+fdisk -l
+mount -v -t ext4 /dev/sdc1 $LFS
+mount
+fdisk -l
+fdisk -l
+mkfs -v -t ext4 /dev/sdc1
+mount
+mount
+fdisk -l
+df -hT
+export LFS=/mnt/lfs
+mkdir -pv $LFS
+mount -v -t ext4 /dev/sdc1 $LFS
+mount -v -t ext4 /dev/sdc $LFS
+df -hT
+cd /mnt/
+ls
+host2
+mount
+fdisk -l
+fdisk -l
+cd /
+ls /mnt/
+cd /mnt/
+ls
+ls /mnt/
+mount
+fdisk -l
+fdisk 
+
+fdisk -s
+fdisk -s sdc1
+fdisk -s sdc
+fdisk /dev/sdc1
+fdisk /dev/sdc
+df -hT
+fdisk -l
+history 
+mkfs -v -t ext4 /dev/sdc1
+export LFS=/mnt/lfs
+mkdir -pv $LFS
+mount -v -t ext4 /dev/sdc1 $LFS
+fdisk -l
